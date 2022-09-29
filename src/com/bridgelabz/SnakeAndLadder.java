@@ -15,6 +15,28 @@ public class SnakeAndLadder {
                 player1 = player1 - dieRoll;
             }
             System.out.println(player1);
+            int option = (int)Math.floor(Math.random()*3);
+            switch (option) {
+                case 0 :
+                    System.out.println("No play,remain at position ...");
+                    break;
+                case 1 :
+
+                    if(player1<80) {
+                        System.out.println("Whoow !! Got ladder ...");
+                        player1 += dieRoll;
+                    }
+                    System.out.println(player1);
+                    break;
+                case 2:
+                    if(player1>18 && player1<95) {
+                        System.out.println("Oops !!! beaten by snake buddy ...");
+                        player1 -= dieRoll;
+                    }
+                    System.out.println(player1);
+                    break;
+
+            }
         }
 
 
